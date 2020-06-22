@@ -107,12 +107,6 @@ requests:
           - 404 Not Found<br>
 
       - type: word
-        name: statuspage
-        words:
-          - Better Status Communication
-          - You are being <a href="https://www.statuspage.io">redirected
-
-      - type: word
         name: bitbucket
         words:
           - The page you have requested does not exist
@@ -238,11 +232,6 @@ requests:
         name: bigcartel
         words:
           - "<h1>Oops! We couldn&#8217;t find that page.</h1>"
-
-      - type: word
-        name: activecompaign
-        words:
-          - alt="LIGHTTPD - fly light."
 
       - type: word
         name: compaignmonitor
