@@ -30,11 +30,11 @@ An overview of the nuclei template directory including number of templates assoc
 | --------------- | ------------------------------- | ---------------- | ------------------------------ |
 | cves            | 154            | default-logins   | 8 |
 | dns             | 6               | exposed-panels   | 73   |
-| exposed-tokens  | 9  | exposures        | 40      |
+| exposed-tokens  | 9  | exposures        | 39      |
 | fuzzing         | 5           | helpers          | 3        |
-| miscellaneous   | 14     | misconfiguration | 37 |
-| takeovers       | 1         | technologies     | 43     |
-| vulnerabilities | 62 | workflows        | 16        |
+| miscellaneous   | 13     | misconfiguration | 40 |
+| takeovers       | 1         | technologies     | 45     |
+| vulnerabilities | 69 | workflows        | 17        |
 
 
 **Tree structure of nuclei templates:**
@@ -43,6 +43,7 @@ An overview of the nuclei template directory including number of templates assoc
 <summary> Nuclei templates </summary>
 
 ```
+├── CODE_OF_CONDUCT.md
 ├── LICENSE.md
 ├── README.md
 ├── cves
@@ -347,7 +348,6 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── phpinfo.yaml
 │   │   ├── rails-database-config.yaml
 │   │   ├── redmine-db-config.yaml
-│   │   ├── server-status-localhost.yaml
 │   │   ├── syfmony-profiler.yaml
 │   │   ├── symfony-database-config.yaml
 │   │   ├── symfony-profiler.yaml
@@ -392,7 +392,6 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── security.txt.yaml
 │   ├── trace-method.yaml
 │   ├── unencrypted-bigip-ltm-cookie.yaml
-│   ├── wp-xmlrpc.yaml
 │   └── xml-schema-detect.yaml
 ├── misconfiguration
 │   ├── aem-groovyconsole.yaml
@@ -419,10 +418,13 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── larvel-debug.yaml
 │   ├── linkerd-ssrf-detect.yaml
 │   ├── manage-engine-ad-search.yaml
+│   ├── nginx-status.yaml
 │   ├── php-errors.yaml
+│   ├── php-fpm-status.yaml
 │   ├── put-method-enabled.yaml
 │   ├── rack-mini-profiler.yaml
 │   ├── salesforce-aura-misconfig.yaml
+│   ├── server-status-localhost.yaml
 │   ├── shell-history.yaml
 │   ├── sidekiq-dashboard.yaml
 │   ├── springboot-detect.yaml
@@ -455,6 +457,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── liferay-portal-detect.yaml
 │   ├── linkerd-badrule-detect.yaml
 │   ├── lotus-domino-version.yaml
+│   ├── lucee-detect.yaml
 │   ├── magmi-detect.yaml
 │   ├── mrtg-detect.yaml
 │   ├── netsweeper-webadmin-detect.yaml
@@ -467,6 +470,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── s3-detect.yaml
 │   ├── sap-netweaver-as-java-detect.yaml
 │   ├── sap-netweaver-detect.yaml
+│   ├── selea-ip-camera.yaml
 │   ├── shiro-detect.yaml
 │   ├── sql-server-reporting.yaml
 │   ├── tech-detect.yaml
@@ -520,6 +524,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── rce-via-java-deserialization.yaml
 │   │   ├── rconfig-rce.yaml
 │   │   ├── sick-beard-xss.yaml
+│   │   ├── sonicwall-sslvpn-shellshock.yaml
 │   │   ├── symantec-messaging-gateway.yaml
 │   │   ├── thinkific-redirect.yaml
 │   │   ├── tikiwiki-reflected-xss.yaml
@@ -533,6 +538,11 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── springboot
 │   │   ├── springboot-actuators-jolokia-xxe.yaml
 │   │   └── springboot-h2-db-rce.yaml
+│   ├── thinkphp
+│   │   ├── thinkphp-2-rce.yaml
+│   │   ├── thinkphp-5022-rce.yaml
+│   │   ├── thinkphp-5023-rce.yaml
+│   │   └── thinkphp-509-information-disclosure.yaml
 │   ├── vmware
 │   │   ├── vmware-vcenter-lfi-linux.yaml
 │   │   └── vmware-vcenter-lfi.yaml
@@ -551,7 +561,9 @@ An overview of the nuclei template directory including number of templates assoc
 │       ├── wordpress-tmm-db-migrate.yaml
 │       ├── wordpress-user-enumeration.yaml
 │       ├── wordpress-wordfence-xss.yaml
-│       └── wordpress-wpcourses-info-disclosure.yaml
+│       ├── wordpress-wpcourses-info-disclosure.yaml
+│       ├── wp-enabled-registration.yaml
+│       └── wp-xmlrpc.yaml
 └── workflows
     ├── artica-web-proxy-workflow.yaml
     ├── bigip-workflow.yaml
@@ -567,13 +579,14 @@ An overview of the nuclei template directory including number of templates assoc
     ├── sap-netweaver-workflow.yaml
     ├── solarwinds-orion-workflow.yaml
     ├── springboot-workflow.yaml
+    ├── thinkphp-workflow.yaml
     ├── vbulletin-workflow.yaml
     └── wordpress-workflow.yaml
 ```
 
 </details>
 
-**53 directories, 473 files**.
+**54 directories, 485 files**.
 
 📖 Documentation
 -----
